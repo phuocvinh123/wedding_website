@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Shantell Sans', cursive !important;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.great-vibes {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.shantell-sans {
+  font-family: "Shantell Sans", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "BNCE" 0,
+    "INFM" 0,
+    "SPAC" 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.background-overlay {
+  background: #fff;
+  content: '';
+  height: 70px;
+  width: 300px;
+  position: absolute;
+  left: -155px;
+  opacity: 0.2;
+  transform: rotate(50deg) translateY(100%);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 1;
+}
+
+.group:hover .background-overlay {
+  transform: rotate(50deg) translateY(-450%);
+  opacity: 0.3;
+}
+
+.story-head {
+  content: '';
+  position: absolute;
+  bottom: 50%; /* Đặt giữa theo chiều dọc */
+  left: -40px; /* Đặt bên phải văn bản */
+  transform: translateY(50%); /* Đưa nó lên một nửa chiều cao của nó */
+  width: 2px;
+  height: 250px;
+  border-right: 2px dashed #ec2328; /* Đường viền chấm */
+}
+
+.expand-story {
+  position: absolute;
+  left: -28px; /* Đặt tam giác sang bên trái */
+  top: 40px; /* Điều chỉnh vị trí theo nhu cầu */
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent; /* Một bên của tam giác */
+  border-right: 20px solid transparent; /* Bên kia của tam giác */
+  border-top: 30px solid #fff; /* Màu của tam giác, ở đây tam giác hướng xuống */
+  transform: rotate(90deg); /* Xoay tam giác nếu cần */
+  text-shadow: 20px 0 24px #eee; /* Nếu cần thêm bóng */
+}
+
+.story-head1 {
+  content: '';
+  position: absolute;
+  bottom: 50%; /* Đặt giữa theo chiều dọc */
+  right: -40px; /* Đặt bên phải văn bản */
+  transform: translateY(50%); /* Đưa nó lên một nửa chiều cao của nó */
+  width: 2px;
+  height: 250px;
+  border-right: 2px dashed #ec2328; /* Đường viền chấm */
+}
+
+.expand-story1 {
+  position: absolute;
+  right: -28px; /* Đặt tam giác sang bên trái */
+  top: 40px; /* Điều chỉnh vị trí theo nhu cầu */
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent; /* Một bên của tam giác */
+  border-right: 20px solid transparent; /* Bên kia của tam giác */
+  border-top: 30px solid #fff; /* Màu của tam giác, ở đây tam giác hướng xuống */
+  transform: rotate(150deg); /* Xoay tam giác nếu cần */
+  text-shadow: 20px 0 24px #eee; /* Nếu cần thêm bóng */
+}
+
+.image-story {
+  position: relative; /* Đảm bảo rằng hiệu ứng viền được định vị chính xác */
+}
+
+.image-story:before {
+  content: '';
+  position: absolute;
+  border: 2px solid #fbfbfbad; /* Màu và độ dày của viền */
+  top: 10px; /* Khoảng cách từ trên xuống */
+  left: 10px; /* Khoảng cách từ trái sang */
+  right: 10px; /* Khoảng cách từ phải sang */
+  bottom: 10px; /* Khoảng cách từ dưới lên */
+  -webkit-transition: all 0.6s ease-in-out; /* Hiệu ứng chuyển tiếp cho trình duyệt Webkit */
+  -o-transition: all 0.6s ease-in-out; /* Hiệu ứng chuyển tiếp cho trình duyệt Opera */
+  transition: all 0.6s ease-in-out; /* Hiệu ứng chuyển tiếp cho tất cả trình duyệt */
+}
+
+.image-story:hover:before {
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.4;
+}
