@@ -27,6 +27,22 @@ body {
   }
 }
 
+@keyframes bounce-border {
+  0%, 100% {
+    border-color: transparent; /* Không có border ban đầu và cuối */
+  }
+  50% {
+    border-color: rgba(255, 99, 71, 0.5); /* Màu đỏ nhạt giữa animation */
+  }
+}
+
+.animate-bounce-border {
+  animation: bounce-border 1s infinite; 
+  border-width: 4px; 
+  border-style: solid; 
+  border-radius: 100%;
+}
+
 .great-vibes {
   font-family: "Great Vibes", cursive;
   font-weight: 400;

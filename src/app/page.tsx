@@ -1,3 +1,4 @@
+import Animation from '@/components/body/animation';
 import Couple from '@/components/body/couple';
 import Guestbook from '@/components/body/guestbook';
 import HomeComponents from '@/components/body/home';
@@ -12,6 +13,7 @@ import React from 'react';
 export default function Home() {
   return (
     <>
+      <Animation />
       <Header />
       <HomeComponents />
       <Couple />

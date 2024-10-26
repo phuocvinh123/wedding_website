@@ -1,0 +1,64 @@
+/* animation.module.scss */
+.heart {
+  position: fixed;
+  width: 30px; /* Kích thước trái tim */
+  height: 30px; /* Kích thước trái tim */
+  animation: fall 3s forwards ease-in; /* Thay đổi thời gian và thêm ease-in */
+  z-index: 999;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  10% {
+    transform: translateY(10vh) translateX(-10px);
+    animation-timing-function: linear;
+    opacity: 0.9;
+  }
+  20% {
+    transform: translateY(20vh) translateX(20px);
+    animation-timing-function: linear;
+    opacity: 0.8;
+  }
+  30% {
+    transform: translateY(30vh) translateX(-30px);
+    animation-timing-function: linear;
+    opacity: 0.7;
+  }
+  40% {
+    transform: translateY(40vh) translateX(30px);
+    animation-timing-function: linear;
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(50vh) translateX(-30px);
+    animation-timing-function: linear;
+    opacity: 0.5;
+  }
+  60% {
+    transform: translateY(60vh) translateX(30px);
+    animation-timing-function: linear;
+    opacity: 0.4;
+  }
+  70% {
+    transform: translateY(70vh) translateX(-30px);
+    animation-timing-function: linear;
+    opacity: 0.3;
+  }
+  80% {
+    transform: translateY(80vh) translateX(50px);
+    animation-timing-function: linear;
+    opacity: 0.2;
+  }
+  90% {
+    transform: translateY(90vh) translateX(-50px);
+    animation-timing-function: linear;
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0; /* Biến mất */
+  }
+}
