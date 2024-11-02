@@ -1,9 +1,10 @@
 'use client';
+
 import { useEffect, useState, useRef } from 'react';
 import styles from './animation.module.scss';
 
 export default function Animation() {
-  const [play, setPlay] = useState(true); // Bắt đầu với trạng thái không phát
+  const [play, setPlay] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
@@ -96,6 +97,7 @@ export default function Animation() {
           )}
         </div>
       </div>
+      <div className='absolute bottom-20 right-16 border border-transparent animate-bounce-border'></div>
     </div>
   );
 }

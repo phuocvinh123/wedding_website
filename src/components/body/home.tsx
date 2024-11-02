@@ -7,17 +7,18 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { useMediaQuery } from '@chakra-ui/react';
 
 export default function HomeComponents() {
   const [isClient, setIsClient] = useState(false);
-
+  const [isLg] = useMediaQuery('(min-width: 1024px)');
   useEffect(() => {
     setIsClient(true);
   }, []);
 
   if (!isClient) return null;
   return (
-    <div className='h-[920px] relative z-10'>
+    <div className='xl:h-[920px] lg:h-[800px] h-[750px] relative z-10'>
       <Swiper
         slidesPerView={1}
         spaceBetween={0}
@@ -25,7 +26,7 @@ export default function HomeComponents() {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+        navigation={isLg}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
@@ -41,6 +42,7 @@ export default function HomeComponents() {
             alt='images'
             fill
             style={{ objectFit: 'cover' }}
+            className='object-cover-responsive object-cover'
           />
           <div className='absolute inset-0 bg-gray-600 opacity-30'></div>
         </SwiperSlide>
@@ -50,6 +52,7 @@ export default function HomeComponents() {
             alt='images'
             fill
             style={{ objectFit: 'cover' }}
+            className='object-cover-responsive object-cover'
           />
           <div className='absolute inset-0 bg-gray-600 opacity-30'></div>
         </SwiperSlide>
@@ -59,20 +62,23 @@ export default function HomeComponents() {
             alt='images'
             fill
             style={{ objectFit: 'cover' }}
+            className='object-cover-responsive object-cover'
           />
           <div className='absolute inset-0 bg-gray-600 opacity-30'></div>
         </SwiperSlide>
       </Swiper>
 
       <div className='absolute z-30 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 '>
-        <div className='relative text-white text-center flex flex-col justify-center items-center'>
-          <div className='text-3xl'>We’re Getting Married!</div>
-          <div className='text-6xl mt-4'>Kiến Văn & Việt Hoài</div>
+        <div className='relative text-white text-center flex flex-col justify-center items-center md:w-auto w-[300px]'>
+          <div className='lg:text-3xl text-xl'>We’re Getting Married!</div>
+          <div className='xl:text-6xl md:text-4xl sm:text-3xl text-2xl mt-4 font-bold'>
+            Kiến Văn & Việt Hoài
+          </div>
           <div className='text-lg mt-4 bg-[#ee4d2d]  rounded-md w-[200px] py-4'>
             <div>SAVE THE DATE </div>
             <div>04-04-2024</div>
           </div>
-          <div className='absolute z-30 -top-10 -left-40'>
+          <div className='absolute z-30 -top-10 -left-40 lg:block hidden'>
             <Image
               src='https://res.cloudinary.com/dxwizprbn/image/upload/v1728096747/married/xpbzxm4lm1np4i6rdbvn.png'
               alt='image'
@@ -80,7 +86,7 @@ export default function HomeComponents() {
               height={160}
             ></Image>
           </div>
-          <div className='absolute z-30 -bottom-10 -right-40'>
+          <div className='absolute z-30 -bottom-10 -right-40 lg:block hidden'>
             <Image
               src='https://res.cloudinary.com/dxwizprbn/image/upload/v1728096747/married/cvjsoqikhoujuhgjqxcp.png'
               alt='image'

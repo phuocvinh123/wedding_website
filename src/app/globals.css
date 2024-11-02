@@ -49,7 +49,15 @@ body {
   font-style: normal;
 }
 
-
+.object-cover-responsive {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
 .shantell-sans {
   font-family: "Shantell Sans", cursive;
   font-optical-sizing: auto;
