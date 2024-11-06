@@ -4,7 +4,7 @@
   width: 30px; /* Kích thước trái tim */
   height: 30px; /* Kích thước trái tim */
   animation: fall 3s forwards ease-in; /* Thay đổi thời gian và thêm ease-in */
-  z-index: 999;
+  pointer-events: none;
 }
 
 @keyframes fall {

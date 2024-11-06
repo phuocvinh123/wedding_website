@@ -12,7 +12,7 @@ export default function Couple() {
   if (!isClient) return null;
   return (
     <>
-      <div className='container mx-auto my-10'>
+      <div className='xl:container mx-auto my-10'>
         <div className='text-4xl font-bold text-center'>Cặp đôi</div>
         <div className='flex flex-col justify-center items-center mt-6'>
           <div className='h-8 border-l-[1.5px] border-[#ea3e23]'></div>
@@ -30,10 +30,31 @@ export default function Couple() {
             </svg>
           </div>
         </div>
-        <div className='flex gap-4 items-center justify-center mt-16'>
-          <div className='flex mr-48 group'>
-            <div className='relative'>
-              <div className='flex gap-4'>
+        <div className='flex xl:flex-row flex-col xl:gap-4 gap-20 items-center justify-center mt-16'>
+          <div className='flex xl:mr-48 justify-center items-center group'>
+            <div className='relative flex flex-col items-center'>
+              <div className='rounded-full border-solid border-[#fff] border-[8px] shadow-custom sm:hidden w-[200px] flex items-center'>
+                <div className='relative overflow-hidden'>
+                  <Image
+                    src='https://cdn.biihappy.com/ziiweb/default/website/3b48bc6125ce6d186297a3e90a11085e.jpeg'
+                    alt='images'
+                    width={196}
+                    height={196}
+                    className='rounded-full'
+                  ></Image>
+                  <div className='background-overlay'></div>
+                  <div className='absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-700 rounded-full'></div>
+                  <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                    <span className='text-white text-3xl font-bold uppercase'>
+                      Chú Rể
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className='flex sm:flex-row flex-col sm:gap-4 gap-6 sm:my-0 my-4'>
+                <div className='xl:text-2xl text-xl font-bold'>
+                  Hoàng Kiến Văn
+                </div>
                 <div className='flex gap-4'>
                   <div className='rounded-full p-2 bg-gray-50 hover:bg-[#ea3e23] hover:svg-white  text-[#ea3e23] hover:text-white'>
                     <svg
@@ -81,9 +102,8 @@ export default function Couple() {
                     </svg>
                   </div>
                 </div>
-                <div className='text-2xl font-bold'>Hoàng Kiến Văn</div>
               </div>
-              <div className='rounded-md border-solid border-[#fff] border-[8px] bg-[#fbfbfb] px-6 py-4 w-[363px] shadow-custom mt-4'>
+              <div className='rounded-md border-solid border-[#fff] border-[8px] bg-[#fbfbfb] px-6 py-4 xl:w-[363px] sm:max-w-[569px] shadow-custom mt-4'>
                 <div className='flex gap-1 items-center justify-end'>
                   <div className='text-sm '>Con ông:</div>
                   <div className='text-lg font-medium'>HOÀNG ANH KIỆT</div>
@@ -103,7 +123,7 @@ export default function Couple() {
                   </div>
                 </div>
               </div>
-              <div className='rounded-full border-solid border-[#fff] border-[8px] shadow-custom absolute -top-2 -right-48'>
+              <div className='rounded-full border-solid border-[#fff] border-[8px] shadow-custom sm:flex absolute hidden top-2 -right-48'>
                 <div className='relative overflow-hidden'>
                   <Image
                     src='https://cdn.biihappy.com/ziiweb/default/website/3b48bc6125ce6d186297a3e90a11085e.jpeg'
@@ -123,9 +143,27 @@ export default function Couple() {
               </div>
             </div>
           </div>
-          <div className='flex ml-48 group'>
-            <div className='relative'>
-              <div className='flex gap-4 ml-8'>
+          <div className='flex xl:ml-48 sm:ml-96 group'>
+            <div className='relative flex flex-col items-center'>
+              <div className='rounded-full border-solid border-[#fff] border-[8px] shadow-custom sm:hidden flex  '>
+                <div className='relative overflow-hidden'>
+                  <Image
+                    src='https://cdn.biihappy.com/ziiweb/default/website/59b631f29bfb9f7cd20437d27ddbe4db.jpeg'
+                    alt='images'
+                    width={196}
+                    height={196}
+                    className='rounded-full'
+                  ></Image>
+                  <div className='background-overlay'></div>
+                  <div className='absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-700 rounded-full'></div>
+                  <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                    <span className='text-white text-3xl font-bold uppercase'>
+                      Cô dâu
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className='flex sm:flex-row flex-col sm:gap-4 gap-6 ml-8 sm:my-0 my-4'>
                 <div className='text-2xl font-bold'>Ngô Việt Hoài</div>
                 <div className='flex gap-4'>
                   <div className='rounded-full p-2 bg-gray-50 hover:bg-[#ea3e23] hover:svg-white  text-[#ea3e23] hover:text-white'>
@@ -175,7 +213,7 @@ export default function Couple() {
                   </div>
                 </div>
               </div>
-              <div className='rounded-md border-solid border-[#fff] border-[8px] bg-[#fbfbfb] px-6 py-4 w-[363px] shadow-custom mt-4'>
+              <div className='rounded-md border-solid border-[#fff] border-[8px] bg-[#fbfbfb] px-6 py-4 xl:w-[363px] sm:w-[569px] shadow-custom mt-4'>
                 <div className='flex gap-1 items-center justify-start'>
                   <div className='text-sm '>Con ông:</div>
                   <div className='text-lg font-medium uppercase'>
@@ -199,7 +237,7 @@ export default function Couple() {
                   </div>
                 </div>
               </div>
-              <div className='rounded-full border-solid border-[#fff] border-[8px] shadow-custom absolute -top-2 -left-48'>
+              <div className='rounded-full border-solid border-[#fff] border-[8px] shadow-custom sm:block hidden absolute top-2 -left-48'>
                 <div className='relative overflow-hidden'>
                   <Image
                     src='https://cdn.biihappy.com/ziiweb/default/website/59b631f29bfb9f7cd20437d27ddbe4db.jpeg'
@@ -222,8 +260,8 @@ export default function Couple() {
         </div>
       </div>
       <div className='bg-[#ffe2e5] p-5 my-20'>
-        <div className='flex justify-center items-center gap-8'>
-          <div className='flex gap-2 items-center border-[#ea3e23] hover:bg-[#ea3e23] border-solid border-[0.5px] px-12 py-3 text-[#ea3e23] hover:text-white bg-white'>
+        <div className='flex flex-wrap justify-center items-center gap-8'>
+          <div className='flex justify-center gap-2 items-center border-[#ea3e23] hover:bg-[#ea3e23] border-solid border-[0.5px]  py-3 text-[#ea3e23] hover:text-white bg-white w-[280px]'>
             <div>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -245,7 +283,7 @@ export default function Couple() {
             </div>
             <div className='uppercase'>Gửi lời chúc</div>
           </div>
-          <div className='flex gap-2 items-center border-[#ea3e23] hover:bg-[#ea3e23] border-solid border-[0.5px] px-12 py-3 text-[#ea3e23] hover:text-white bg-white'>
+          <div className='flex justify-center gap-2 items-center border-[#ea3e23] hover:bg-[#ea3e23] border-solid border-[0.5px]  py-3 text-[#ea3e23] hover:text-white bg-white w-[280px]'>
             <div>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -264,7 +302,7 @@ export default function Couple() {
             </div>
             <div className='uppercase '>xác nhận tham dự</div>
           </div>
-          <div className='flex gap-2 items-center border-[#ea3e23] hover:bg-[#ea3e23] border-solid border-[0.5px] px-12 py-3 text-[#ea3e23] hover:text-white bg-white'>
+          <div className='flex justify-center gap-2 items-center border-[#ea3e23] hover:bg-[#ea3e23] border-solid border-[0.5px]  py-3 text-[#ea3e23] hover:text-white bg-white w-[280px]'>
             <div>
               <svg
                 xmlns='http://www.w3.org/2000/svg'

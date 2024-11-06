@@ -45,7 +45,7 @@ export default function LoveStory() {
 
   return (
     <>
-      <div className='container mx-auto mb-10 relative'>
+      <div className='container mx-auto  mb-10 relative'>
         <h1 className='text-center text-3xl font-bold'>Chuyện tình yêu</h1>
         <div className='flex flex-col justify-center items-center mt-6'>
           <div className='h-8 border-l-[1.5px] border-[#ea3e23]'></div>
@@ -63,7 +63,7 @@ export default function LoveStory() {
             </svg>
           </div>
         </div>
-        <div className='flex mt-10 gap-20 justify-center relative'>
+        <div className='flex lg:flex-row flex-col items-center mt-10 gap-20 justify-center relative'>
           <div className='relative image-story'>
             <Image
               src='https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/0f99c255f7aa7714d366ebde51c86d53.jpeg'
@@ -72,13 +72,13 @@ export default function LoveStory() {
               height={495.5}
             />
           </div>
-          <div className=' relative'>
-            <div className='text-3xl font-bold w-[450px]'>
+          <div className='relative flex flex-col lg:justify-start lg:items-start justify-center items-center'>
+            <div className='sm:text-3xl text-2xl font-bold sm:w-[450px] w-[400px] sm:text-left text-center'>
               Bạn có tin vào tình yêu online không?
             </div>
             <div className='mt-4 text-gray-500'>December 12 2015</div>
             <div className='story-head'></div>
-            <div className='text-lg text-[#666] min-h-[155px] px-7 py-6 shadow-custom rounded-[10px] mt-4 w-[550px] relative'>
+            <div className='text-lg text-[#666] min-h-[155px] px-7 py-6 shadow-custom rounded-[10px] mt-4 sm:w-[550px] w-[450px] relative'>
               <div className='expand-story'></div>
               Tôi đã từng không tin vào tình yêu online. Đã từng nghĩ làm sao có
               thể thích một người chưa từng gặp mặt? Vậy mà giờ đây tôi lại đang
@@ -89,14 +89,22 @@ export default function LoveStory() {
             </div>
           </div>
         </div>
-        <div className='flex mt-20 gap-20 justify-center relative'>
-          <div className=' relative flex flex-col items-end'>
-            <div className='text-3xl font-bold w-[450px] text-end'>
+        <div className='flex lg:flex-row flex-col items-center mt-20 gap-20 justify-center relative'>
+          <div className='relative image-story sm:hidden flex'>
+            <Image
+              src='https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/0f99c255f7aa7714d366ebde51c86d53.jpeg'
+              alt='image'
+              width={495.5}
+              height={495.5}
+            />
+          </div>
+          <div className='relative flex flex-col sm:items-end items-center'>
+            <div className='sm:text-3xl text-2xl font-bold sm:w-[450px] w-[400px] sm:text-end text-center'>
               Lời tỏ tình dễ thương^^
             </div>
             <div className='mt-4 text-gray-500'>December 12 2015</div>
             <div className='story-head1'></div>
-            <div className='text-lg text-[#666] min-h-[155px] px-7 py-6 shadow-custom rounded-[10px] mt-4 w-[550px] relative text-end'>
+            <div className='text-lg text-[#666] min-h-[155px] px-7 py-6 shadow-custom rounded-[10px] mt-4 sm:w-[550px] w-[450px] relative text-end'>
               <div className='expand-story1'></div>
               Ngày ấy, tôi 21! Một mình giữa phố thị nấp tập. Mỗi chiều cuối
               tuần thường chạy xe vòng quanh qua những con phố, len lỏi trong
@@ -107,7 +115,7 @@ export default function LoveStory() {
               anh được làm những điều ấy cùng em”.
             </div>
           </div>
-          <div className='relative image-story'>
+          <div className='relative image-story sm:flex hidden'>
             <Image
               src='https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/0f99c255f7aa7714d366ebde51c86d53.jpeg'
               alt='image'
@@ -116,7 +124,7 @@ export default function LoveStory() {
             />
           </div>
         </div>
-        <div className='flex mt-20 gap-20 justify-center relative'>
+        <div className='flex lg:flex-row flex-col items-center mt-20 gap-20 justify-center relative'>
           <div className='relative image-story'>
             <Image
               src='https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/0f99c255f7aa7714d366ebde51c86d53.jpeg'
@@ -125,13 +133,13 @@ export default function LoveStory() {
               height={495.5}
             />
           </div>
-          <div className=' relative'>
-            <div className='text-3xl font-bold w-[450px]'>
+          <div className=' relative flex flex-col sm:items-start items-center'>
+            <div className='sm:text-3xl text-2xl font-bold sm:w-[450px] w-[400px] sm:text-left text-center'>
               Phút giây cầu hôn
             </div>
             <div className='mt-4 text-gray-500'>December 12 2015</div>
             <div className='story-head'></div>
-            <div className='text-lg text-[#666] min-h-[155px] px-7 py-6 shadow-custom rounded-[10px] mt-4 w-[550px] relative'>
+            <div className='text-lg text-[#666] min-h-[155px] px-7 py-6 shadow-custom rounded-[10px] mt-4 sm:w-[550px] w-[450px] relative'>
               <div className='expand-story'></div>5 năm bên nhau không phải là
               quãng thời gian quá dài, nhưng đủ cho chúng ta nhận ra được rất
               nhiều điều. Yêu nhau, vun vén hạnh phúc và cùng nỗ lực vượt qua
@@ -142,14 +150,22 @@ export default function LoveStory() {
             </div>
           </div>
         </div>
-        <div className='flex mt-20 gap-20 justify-center relative'>
-          <div className=' relative flex flex-col items-end'>
-            <div className='text-3xl font-bold w-[450px] text-end'>
+        <div className='flex lg:flex-row flex-col items-center mt-20 gap-20 justify-center relative'>
+          <div className='relative image-story sm:hidden flex'>
+            <Image
+              src='https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/0f99c255f7aa7714d366ebde51c86d53.jpeg'
+              alt='image'
+              width={495.5}
+              height={495.5}
+            />
+          </div>
+          <div className=' relative flex flex-col sm:items-end items-center'>
+            <div className='sm:text-3xl text-2xl font-bold sm:w-[450px] w-[400px] sm:text-end text-center'>
               Ngày lễ đính hôn
             </div>
             <div className='mt-4 text-gray-500'>December 12 2015</div>
             <div className='story-head1'></div>
-            <div className='text-lg text-[#666] min-h-[155px] px-7 py-6 shadow-custom rounded-[10px] mt-4 w-[550px] relative text-end'>
+            <div className='text-lg text-[#666] min-h-[155px] px-7 py-6 shadow-custom rounded-[10px] mt-4 sm:w-[550px] w-[450px] relative text-end'>
               <div className='expand-story1'></div>
               “Tiếng trái tim đôi ta đập thật nhanh. Thì thầm lời yêu thương.
               Ngày tình về chung đôi...” Sau bao nhiêu chờ đợi, cuối cùng ngày
@@ -159,7 +175,7 @@ export default function LoveStory() {
               sau này sẽ là <br /> mẹ của các con anh.
             </div>
           </div>
-          <div className='relative image-story'>
+          <div className='relative image-story sm:flex hidden'>
             <Image
               src='https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/0f99c255f7aa7714d366ebde51c86d53.jpeg'
               alt='image'

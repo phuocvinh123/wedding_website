@@ -9,14 +9,18 @@ export default function Animation() {
 
   useEffect(() => {
     const createHeart = () => {
+      const heartContainer = document.createElement('div'); // Tạo một lớp bao quanh
+      heartContainer.style.position = 'absolute'; // Đặt vị trí tuyệt đối
+      heartContainer.style.left = Math.random() * 100 + 'vw'; // Vị trí ngẫu nhiên trên trục X
+      heartContainer.style.top = '-10px'; // Bắt đầu từ trên màn hình
+      heartContainer.style.pointerEvents = 'none'; // Cho phép sự kiện đi qua
+
       const heart = document.createElementNS(
         'http://www.w3.org/2000/svg',
         'svg'
       );
       heart.setAttribute('class', styles.heart);
       heart.setAttribute('viewBox', '0 0 32 29.6');
-      heart.style.left = Math.random() * 100 + 'vw'; // Vị trí ngẫu nhiên trên trục X
-      heart.style.top = '-10px'; // Bắt đầu từ trên màn hình
 
       const path = document.createElementNS(
         'http://www.w3.org/2000/svg',
@@ -29,11 +33,12 @@ export default function Animation() {
       path.setAttribute('fill', 'red');
 
       heart.appendChild(path);
-      document.body.appendChild(heart);
+      heartContainer.appendChild(heart);
+      document.body.appendChild(heartContainer);
 
-      heart.addEventListener('animationend', () => {
-        if (document.body.contains(heart)) {
-          document.body.removeChild(heart);
+      heartContainer.addEventListener('animationend', () => {
+        if (document.body.contains(heartContainer)) {
+          document.body.removeChild(heartContainer);
         }
       });
     };
@@ -61,7 +66,7 @@ export default function Animation() {
   };
 
   return (
-    <div className='fixed z-[10000] w-full h-full'>
+    <div className='fixed  w-full h-full'>
       <audio
         ref={audioRef}
         src='/assets/audio/wedding-music.mp3' // Đường dẫn tương đối từ thư mục public
@@ -71,7 +76,7 @@ export default function Animation() {
         className='absolute bottom-20 left-16 border border-transparent animate-bounce-border'
         onClick={togglePlay}
       >
-        <div className='bg-[#df4758] rounded-full px-2 py-[7px] cursor-pointer'>
+        <div className='bg-[#df4758] rounded-full px-2 py-[7px] cursor-pointer '>
           {!play ? (
             <svg
               xmlns='http://www.w3.org/2000/svg'
