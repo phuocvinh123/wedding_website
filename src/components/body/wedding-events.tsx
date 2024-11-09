@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -31,8 +32,8 @@ export default function WeddingEvents() {
       </div>
       <div className='relative mt-7'>
         <div className='flex justify-center -ml-4 -mr-4 gap-8'>
-          <div className='w-1/2 relative flex  justify-end items-end mt-20'>
-            <div className='sticky top-0 right-0 w-[555px] z-[3] bottom-14'>
+          <div className='w-1/2 relative lg:flex  justify-end items-end mt-20  hidden'>
+            <div className='sticky top-0 right-0 max-w-[555px] z-[3] bottom-14'>
               <div className='visible top-[150px] bottom-auto animate-fadeInLeft '>
                 <Image
                   src='https://cdn.biihappy.com/ziiweb/default/template/62ef3cfd4c248a18ec5a9b5a/8cf390dccd7f841cc2fea94f1f2ad7a1.jpg'
@@ -60,17 +61,15 @@ export default function WeddingEvents() {
               </div>
             </div>
           </div>
-          <div className='w-1/2'>
-            <div className='w-[555px] text-left p-6 overflow-hidden border shadow-custom mb-10 rounded-[10px] h-80'>
+          <div className='lg:w-1/2 w-full flex flex-col justify-center items-center'>
+            <div className='lg:max-w-[555px] max-w-[700px] text-left p-6 overflow-hidden border shadow-custom mb-10 rounded-[10px] lg:h-80 '>
               <h3 className='text-2xl font-bold text-center'>LỄ CƯỚI NHÀ NỮ</h3>
-              <div className='flex gap-4 mt-5'>
-                <div className='w-[41%] relative'>
-                  <Image
+              <div className='flex lg:flex-row flex-col justify-center items-center gap-4 mt-5'>
+                <div className='lg:w-[41%] relative'>
+                  <img
                     src='https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/45dfd859dd184042e2a6adaa320ac64b.jpeg'
                     alt='images'
-                    width={192}
-                    height={192}
-                    className='border-[5px] border-solid border-[#fff] shadow-[0_0_32px_#eee] rounded-[15px] block ml-auto mr-auto relative'
+                    className='lg:size-[192px] md:size-[510px] size-[410px] border-[5px] border-solid border-[#fff] shadow-[0_0_32px_#eee] rounded-[15px] block ml-auto mr-auto relative'
                   />
                   <div className='absolute bottom-1 w-full'>
                     <div className='flex justify-center items-center gap-1 bg-[rgb(246_246_246/70%)] p-2'>
@@ -80,7 +79,7 @@ export default function WeddingEvents() {
                     </div>
                   </div>
                 </div>
-                <div className='w-[58%] mt-5'>
+                <div className='lg:w-[58%] mt-5 flex flex-col justify-center items-center'>
                   <div className='flex gap-8'>
                     <div className='flex gap-2'>
                       <div>
@@ -115,7 +114,7 @@ export default function WeddingEvents() {
                       <div>07:30</div>
                     </div>
                   </div>
-                  <div className='text-center mt-4 relative'>
+                  <div className='text-center mt-4 relative '>
                     <div className='absolute left-0'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -178,16 +177,14 @@ export default function WeddingEvents() {
                 </div>
               </div>
             </div>
-            <div className='w-[555px] text-left p-6 overflow-hidden border shadow-custom mb-10 rounded-[10px] h-80 mt-10'>
+            <div className='lg:max-w-[555px] max-w-[700px] text-left p-6 overflow-hidden border shadow-custom mb-10 rounded-[10px] lg:h-80 '>
               <h3 className='text-2xl font-bold text-center'>LỄ CƯỚI NHÀ NỮ</h3>
-              <div className='flex gap-4 mt-5'>
-                <div className='w-[41%] relative'>
-                  <Image
+              <div className='flex lg:flex-row flex-col justify-center items-center gap-4 mt-5'>
+                <div className='lg:w-[41%] relative'>
+                  <img
                     src='https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/45dfd859dd184042e2a6adaa320ac64b.jpeg'
                     alt='images'
-                    width={192}
-                    height={192}
-                    className='border-[5px] border-solid border-[#fff] shadow-[0_0_32px_#eee] rounded-[15px] block ml-auto mr-auto relative'
+                    className='lg:size-[192px] md:size-[510px] size-[410px] border-[5px] border-solid border-[#fff] shadow-[0_0_32px_#eee] rounded-[15px] block ml-auto mr-auto relative'
                   />
                   <div className='absolute bottom-1 w-full'>
                     <div className='flex justify-center items-center gap-1 bg-[rgb(246_246_246/70%)] p-2'>
@@ -197,7 +194,7 @@ export default function WeddingEvents() {
                     </div>
                   </div>
                 </div>
-                <div className='w-[58%] mt-5'>
+                <div className='lg:w-[58%] mt-5 flex flex-col justify-center items-center'>
                   <div className='flex gap-8'>
                     <div className='flex gap-2'>
                       <div>
@@ -232,7 +229,7 @@ export default function WeddingEvents() {
                       <div>07:30</div>
                     </div>
                   </div>
-                  <div className='text-center mt-4 relative'>
+                  <div className='text-center mt-4 relative '>
                     <div className='absolute left-0'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -295,16 +292,14 @@ export default function WeddingEvents() {
                 </div>
               </div>
             </div>
-            <div className='w-[555px] text-left p-6 overflow-hidden border shadow-custom mb-10 rounded-[10px] h-80 mt-10'>
+            <div className='lg:max-w-[555px] max-w-[700px] text-left p-6 overflow-hidden border shadow-custom mb-10 rounded-[10px] lg:h-80 '>
               <h3 className='text-2xl font-bold text-center'>LỄ CƯỚI NHÀ NỮ</h3>
-              <div className='flex gap-4 mt-5'>
-                <div className='w-[41%] relative'>
-                  <Image
+              <div className='flex lg:flex-row flex-col justify-center items-center gap-4 mt-5'>
+                <div className='lg:w-[41%] relative'>
+                  <img
                     src='https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/45dfd859dd184042e2a6adaa320ac64b.jpeg'
                     alt='images'
-                    width={192}
-                    height={192}
-                    className='border-[5px] border-solid border-[#fff] shadow-[0_0_32px_#eee] rounded-[15px] block ml-auto mr-auto relative'
+                    className='lg:size-[192px] md:size-[510px] size-[410px] border-[5px] border-solid border-[#fff] shadow-[0_0_32px_#eee] rounded-[15px] block ml-auto mr-auto relative'
                   />
                   <div className='absolute bottom-1 w-full'>
                     <div className='flex justify-center items-center gap-1 bg-[rgb(246_246_246/70%)] p-2'>
@@ -314,7 +309,7 @@ export default function WeddingEvents() {
                     </div>
                   </div>
                 </div>
-                <div className='w-[58%] mt-5'>
+                <div className='lg:w-[58%] mt-5 flex flex-col justify-center items-center'>
                   <div className='flex gap-8'>
                     <div className='flex gap-2'>
                       <div>
@@ -349,7 +344,7 @@ export default function WeddingEvents() {
                       <div>07:30</div>
                     </div>
                   </div>
-                  <div className='text-center mt-4 relative'>
+                  <div className='text-center mt-4 relative '>
                     <div className='absolute left-0'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -412,16 +407,14 @@ export default function WeddingEvents() {
                 </div>
               </div>
             </div>
-            <div className='w-[555px] text-left p-6 overflow-hidden border shadow-custom mb-10 rounded-[10px] h-80 mt-10'>
+            <div className='lg:max-w-[555px] max-w-[700px] text-left p-6 overflow-hidden border shadow-custom mb-10 rounded-[10px] lg:h-80 '>
               <h3 className='text-2xl font-bold text-center'>LỄ CƯỚI NHÀ NỮ</h3>
-              <div className='flex gap-4 mt-5'>
-                <div className='w-[41%] relative'>
-                  <Image
+              <div className='flex lg:flex-row flex-col justify-center items-center gap-4 mt-5'>
+                <div className='lg:w-[41%] relative'>
+                  <img
                     src='https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/45dfd859dd184042e2a6adaa320ac64b.jpeg'
                     alt='images'
-                    width={192}
-                    height={192}
-                    className='border-[5px] border-solid border-[#fff] shadow-[0_0_32px_#eee] rounded-[15px] block ml-auto mr-auto relative'
+                    className='lg:size-[192px] md:size-[510px] size-[410px] border-[5px] border-solid border-[#fff] shadow-[0_0_32px_#eee] rounded-[15px] block ml-auto mr-auto relative'
                   />
                   <div className='absolute bottom-1 w-full'>
                     <div className='flex justify-center items-center gap-1 bg-[rgb(246_246_246/70%)] p-2'>
@@ -431,7 +424,7 @@ export default function WeddingEvents() {
                     </div>
                   </div>
                 </div>
-                <div className='w-[58%] mt-5'>
+                <div className='lg:w-[58%] mt-5 flex flex-col justify-center items-center'>
                   <div className='flex gap-8'>
                     <div className='flex gap-2'>
                       <div>
@@ -466,7 +459,7 @@ export default function WeddingEvents() {
                       <div>07:30</div>
                     </div>
                   </div>
-                  <div className='text-center mt-4 relative'>
+                  <div className='text-center mt-4 relative '>
                     <div className='absolute left-0'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
