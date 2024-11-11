@@ -1,7 +1,12 @@
 'use client';
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import 'glightbox/dist/css/glightbox.css';
 import { useEffect } from 'react';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 export default function WeddingPhoto() {
   const images = [
@@ -52,40 +57,66 @@ export default function WeddingPhoto() {
         </div>
       </div>
       <div className='flex gap-8 flex-wrap justify-center mt-10'>
-        {images.map((src, index) => (
-          <div
-            key={index}
-            className='relative group cursor-pointer overflow-hidden'
-          >
-            <a href={src} className='glightbox'>
-              <Image
-                src={src}
-                alt={`Wedding image ${index + 1}`}
-                width={390}
-                height={590}
-                className='block'
-              />
-            </a>
-            <div className='absolute left-0 top-0 w-full h-full bg-[#ffffff6e] opacity-0 z-20 transition-all duration-600 ease-[cubic-bezier(0.45,_0.05,_0.55,_0.95)] group-hover:opacity-100 group-hover:translate-y-0 translate-y-full pointer-events-none'></div>
-            <div className='absolute left-1/2 bottom-1/3 transform -translate-x-1/2 opacity-0 translate-y-20 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000 bg-[#ee4d2d] border p-2 rounded-full '>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='32'
-                height='32'
-                viewBox='0 0 24 24'
-              >
-                <path
-                  fill='none'
-                  stroke='white'
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth='2.5'
-                  d='m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314'
-                />
-              </svg>
-            </div>
-          </div>
-        ))}
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={0}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          speed={1200}
+          effect='fade'
+          modules={[Pagination, Autoplay]}
+          className='mySwiper'
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
+        >
+          {images.map((src, index) => (
+            <SwiperSlide className='relative' key={index}>
+              <div className='relative group cursor-pointer overflow-hidden'>
+                <a href={src} className='glightbox'>
+                  <Image
+                    src={src}
+                    alt={`Wedding image ${index + 1}`}
+                    width={390}
+                    height={590}
+                    className='block'
+                  />
+                </a>
+                <div className='absolute left-0 top-0 w-full h-full bg-[#ffffff6e] opacity-0 z-20 transition-all duration-600 ease-[cubic-bezier(0.45,_0.05,_0.55,_0.95)] group-hover:opacity-100 group-hover:translate-y-0 translate-y-full pointer-events-none'></div>
+                <div className='absolute left-1/2 bottom-1/3 transform -translate-x-1/2 opacity-0 translate-y-20 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000 bg-[#ee4d2d] border p-2 rounded-full '>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='32'
+                    height='32'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      fill='none'
+                      stroke='white'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2.5'
+                      d='m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314'
+                    />
+                  </svg>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

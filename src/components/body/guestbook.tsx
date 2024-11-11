@@ -29,8 +29,8 @@ export default function Guestbook() {
           </svg>
         </div>
       </div>
-      <div className='flex gap-4 justify-center mt-10'>
-        <div className='w-1/2 flex flex-col justify-center items-center'>
+      <div className='flex lg:flex-row flex-col xl:gap-4 lg:gap-0 gap-20 justify-center items-center mt-10'>
+        <div className='lg:w-1/2 w-[90%] flex flex-col justify-center items-center'>
           <div className='text-lg w-[420px] text-center'>
             Cảm ơn bạn rất nhiều vì đã gửi những lời chúc mừng tốt đẹp nhất đến
             đám cưới của chúng tôi!
@@ -40,22 +40,22 @@ export default function Guestbook() {
             <input
               type='text'
               placeholder='Nhập họ tên*'
-              className='bg-[#fbfbfb] border-[1px] border-dashed border-[#fd4951] h-[45px] rounded-[8px] w-[450px] focus:outline-none pl-2'
+              className='bg-[#fbfbfb] border-[1px] border-dashed border-[#fd4951] h-[45px] rounded-[8px] lg:w-[450px] w-[380px] focus:outline-none pl-2'
             />
           </div>
           <div className='mt-10 '>
             <input
               type='text'
               placeholder='Nhập email'
-              className='bg-[#fbfbfb] border-[1px] border-dashed border-[#fd4951] h-[45px] rounded-[8px] w-[450px] focus:outline-none pl-2'
+              className='bg-[#fbfbfb] border-[1px] border-dashed border-[#fd4951] h-[45px] rounded-[8px] lg:w-[450px] w-[380px] focus:outline-none pl-2'
             />
           </div>
-          <div className='mt-10 border-[1px] border-dashed border-[#fd4951] p-[1px] rounded-[8px]'>
+          <div className='mt-10 border-[1px] border-dashed border-[#fd4951] p-[1px] rounded-[8px] lg:w-[450px] w-[380px]'>
             <textarea
               name='content'
               id='content'
               placeholder='Nhập lời chúc của bạn*'
-              className='rounded-none border-none focus:outline-none w-[450px] h-[150px] pl-2 bg-[#fbfbfb]'
+              className='rounded-none border-none focus:outline-none lg:w-[450px] w-[380px] h-[150px] pl-2 bg-[#fbfbfb]'
             />
             <div className='w-[450px] relative bg-white p-[10px] border-[1px] border-solid border-[#f3f1f1] h-[51px]'>
               <div className='absolute right-3 bottom-3'>
@@ -99,7 +99,7 @@ export default function Guestbook() {
             GỬI LỜI CHÚC
           </div>
         </div>
-        <div className='w-1/2'>
+        <div className='lg:w-1/2 w-[90%]'>
           <div className='overflow-y-auto h-[557px] bg-white border-[5px] border-solid border-[#ec2328] text-black'>
             <div className='bg-[#fff0f1] p-3 '>
               <strong>CEO của ...</strong>
